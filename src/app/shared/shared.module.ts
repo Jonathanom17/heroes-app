@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 
@@ -9,7 +9,10 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     ErrorPageComponent
   ],
   imports: [
-    CommonModule
+    
+  ],
+  exports:[
+    ErrorPageComponent
   ]
 })
 export class SharedModule { }
