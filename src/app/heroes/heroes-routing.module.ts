@@ -8,24 +8,16 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 
 const routes: Routes = [
   {
-    path:"",
-    component: LayoutPageComponent
-  },
-  {
-    path:"hero",
-    component: HeroPageComponent
-  },
-  {
-    path:"search",
-    component: SearchPageComponent
-  },
-  {
-    path:"list",
-    component: ListPageComponent
-  },
-  {
-    path:"newhero",
-    component: NewPageComponent
+    path:'',
+    component: LayoutPageComponent,
+    children: [
+      {path:'edit/:id', component: NewPageComponent},
+      {path:'new-hero', component: NewPageComponent},
+      {path:'list', component: ListPageComponent},
+      {path:'search', component: SearchPageComponent},
+      {path:':id', component: HeroPageComponent},
+      {path:'**', redirectTo: 'list'},
+    ]
   },
   
 ];
