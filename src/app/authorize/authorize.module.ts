@@ -5,6 +5,7 @@ import { AuthorizeRoutingModule } from './authorize-routing.module';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -12,10 +13,12 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
     LayoutPageComponent,
     LoginPageComponent,
     RegisterPageComponent
+    
   ],
   imports: [
     CommonModule,
-    AuthorizeRoutingModule
+    AuthorizeRoutingModule,
+    MaterialModule
   ]
 })
 export class AuthorizeModule { }
